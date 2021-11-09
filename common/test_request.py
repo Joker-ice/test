@@ -10,7 +10,8 @@ import json
 # r = requests.post(url='http://www.baidu.com')
 a = {
     'url':'https://www.baidu.com',
-    'headers': {"User-Agent": "Mozilla / 5.0(Windows NT 10.0; Win64; x64) AppleWebKit / 537.36(KHTML, like Gecko) Chrome / 80.0.3987.122  Safari / 537.36"},
+    'headers': {"User-Agent": "Mozilla / 5.0(Windows NT 10.0; Win64; x64)\
+         AppleWebKit / 537.36(KHTML, like Gecko) Chrome / 80.0.3987.122  Safari / 537.36"},
     # 'verify':False
     }
 print(*a)
@@ -19,6 +20,5 @@ res = getattr(requests, 'get')(**a)
 # print(res.text)
 res.encoding='utf8'
 html = res.text
-print(res.general)
 soup = BeautifulSoup(html, 'html.parser')
 # print(soup.title)
